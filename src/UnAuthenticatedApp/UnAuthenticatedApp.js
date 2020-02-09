@@ -1,8 +1,12 @@
-import React from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
+import { withRouter, Redirect, Route, Switch } from 'react-router-dom';
 import Login from '../Login/containers/Login';
 
-function UnAunthenticatedApp() {
+class UnAunthenticatedApp extends Component {
+    componentDidMount() {
+        this.props.history.push("/login");
+    }
+    render() {
     return (
         <Switch>
             <Route path="/login" component={Login} />
@@ -11,5 +15,6 @@ function UnAunthenticatedApp() {
         </Switch>
     )
 }
+}
 
-export default UnAunthenticatedApp;
+export default withRouter(UnAunthenticatedApp);

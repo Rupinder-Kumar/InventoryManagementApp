@@ -11,6 +11,7 @@ class App extends Component {
   }
 
   render() {
+
     const app = this.props.isLoggedIn ? (
       <AuthenticatedApp/>
     ) : (

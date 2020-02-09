@@ -1,5 +1,6 @@
 import * as ActionTypes from "./LoginActionTypes";
 import axios from "axios";
+import { headers } from "../../api/headers";
 
 export const setError = (payload) => ({
     type: ActionTypes.SET_USER_ERROR,
@@ -42,7 +43,10 @@ export const login = payload => {
 
 export const logout = () => {
     return dispatch => {
-        localStorage.removeItem("token");
+        axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {headers})
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
         dispatch(logoutUser())
+        localStorage.removeItem("token");
     }
 }

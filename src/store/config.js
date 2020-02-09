@@ -7,7 +7,7 @@ import productReducer from "../Products/store/ProductReducer";
 
 const rootReducer = combineReducers({
     user: loginReducer,
-    dashboard: productReducer
+    products: productReducer
 })
 
 const store = createStore(
