@@ -1,0 +1,13 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "./variables.scss";
+@import "./helpers.scss";
+
+#root {
+    height: 100%;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+    color: #22333B;
+    font-size: 14px;
+}

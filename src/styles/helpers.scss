@@ -1,0 +1,40 @@
+@import "./variables.scss";
+.form-error {
+    color: $error-color;
+    position: absolute;
+    left: 6%;
+    font-size: 11px;
+    animation-name: slideDown;
+	animation-duration: 1s;	
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-15%);
+	}
+	50%{
+		transform: translateY(35%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+
+.form-field-error {
+    .custom-input:focus {
+        border-color: $error-color;
+        box-shadow: 0 0 0 2px rgba(236, 124, 122, 0.15);
+    }
+    label {
+        color: $error-color;
+    }
+}

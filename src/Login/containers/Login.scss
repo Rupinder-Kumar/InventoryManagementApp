@@ -1,0 +1,8 @@
+@import "../../styles/variables.scss";
+.login-section {
+    display: flex;
+    align-items: center;
+    background-color: $primary-color;
+    height: 100vh;
+    margin: 0 auto;
+}

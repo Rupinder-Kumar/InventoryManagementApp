@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.main {
+    min-height: 100vh;
+    height: auto;
+}
+
+@media(max-width: 768px) {
+    .navbar-brand {
+        font-size: .9rem!important;
+    }
+    .navbar-nav {
+        .nav-item {
+            button {
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
