@@ -30,7 +30,7 @@ class Products extends Component {
             <div className="container">
                 <div className="row mt-5">
                     <div className="col-md-4">
-                        <ProductList selectProduct={this.selectProduct} products={products}/>
+                        <ProductList selectedProductId={this.state.selectedProductId} selectProduct={this.selectProduct} products={products}/>
                     </div>
                     <div className="col-md-8">
                         <ProductStock productCount={productCount}/>

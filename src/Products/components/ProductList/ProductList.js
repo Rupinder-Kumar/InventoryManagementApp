@@ -9,7 +9,7 @@ const ProductList = (props) => {
                 <div className="list-group">
                     {props.products.map((product, index) => {
                         return (
-                            <button key={product.id} onClick={() => props.selectProduct(product.id)} type="button" className={`list-group-item list-group-item-action ${index === 0 ? 'active' : ''}`}>{product.name} <span className="float-right">${product.price}</span></button>
+                            <button key={product.id} onClick={() => props.selectProduct(product.id)} type="button" className={`list-group-item list-group-item-action ${props.selectedProductId === product.id ? 'active' : ''}`}>{product.name} <span className="float-right">${product.price}</span></button>
                         )
                     })}
                     

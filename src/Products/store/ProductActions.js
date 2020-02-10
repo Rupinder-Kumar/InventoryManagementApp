@@ -2,6 +2,7 @@ import * as ActionTypes from "./ProductActionTypes";
 import axios from "axios";
 import { headers } from "../../api/headers"; 
 
+// const headers = header.toString();
 
 export const loadProducts = (payload) => ({
     type: ActionTypes.LOAD_PRODUCTS,
